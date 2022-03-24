@@ -229,8 +229,45 @@ main .container .left-column .profile {
   padding: 1rem 0;
 }
 
-.notifications-popup {
+/* <!--------------------- NOTIFICATION POPUP ---------------------> */
+.left-column .notifications-popup {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 30rem;
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  /* box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60%, 25%); */
+  box-shadow: 0 0 2rem var(--color-primary);
+  z-index: 10;
   display: none;
+}
+
+.left-column .notifications-popup::before {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  background-color: var(--color-white);
+  position: absolute;
+  /* top: 0; */
+  left: -0.6rem;
+  transform: rotate(45deg);
+}
+
+.left-column .notifications-popup > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-column .notifications-popup > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.left-column .notifications-popup > div small {
+  display: block;
 }
 
 /* 
