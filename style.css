@@ -327,7 +327,7 @@ main .container .left-column .profile {
   bottom: 0;
 }
 
-.stories .profile-picture {
+.stories__picture {
   width: 2rem;
   height: 2rem;
   align-self: flex-start;
@@ -356,3 +356,78 @@ main .container .left-column .profile {
   color: var(--color-dark);
   background-color: transparent;
 }
+
+/* <!-- ------------------------ FEEDS --------------------------> */
+.feed {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feed__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed__user {
+  display: flex;
+  gap: 1rem;
+}
+
+.feed__photo {
+  border-radius: var(--card-border-radius);
+  margin: 0.7rem 0;
+}
+
+.feed__action-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.feed__liked-by {
+  display: flex;
+}
+
+.feed__liked-by > img {
+  width: 1.65rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.feed__liked-by > img:not(:first-child) {
+  margin-left: -0.7rem;
+}
+
+.feed__liked-by p {
+  margin-left: 0.6rem;
+}
+/* 
+              <img class="feed__photo" src="./images/feed-1.jpg" />
+
+              <div class="feed__action-btns">
+                <div class="feed__action-btns__group">
+                  <i class="uil uil-heart"></i>
+                  <i class="uil uil-comment-dots"></i>
+                  <i class="uil uil-share-alt"></i>
+                </div>
+                <div class="feed__action-btns-bookmark">
+                  <i class="uil uil-bookmark-full"></i>
+                </div>
+              </div>
+
+              <div class="feed__liked-by">
+                <img src="./images/profile-10.jpg" />
+                <div>
+                  <img src="./images/profile-10.jpg" />
+                </div>  
+                <img src="./images/profile-4.jpg" />
+                <img src="./images/profile-15.jpg" />
+                <p>Liked by <b>Ernest Achiever</b> and <b>2,232 others</b></p>
+              </div>
+*/
