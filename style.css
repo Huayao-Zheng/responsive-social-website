@@ -97,13 +97,13 @@ header .container {
   align-items: center;
 }
 
-header .search-bar {
+.search-bar {
   background-color: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
 }
 
-header .search-bar input[type='search'] {
+.search-bar input[type='search'] {
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
@@ -407,27 +407,132 @@ main .container .left-column .profile {
 .feed__liked-by p {
   margin-left: 0.6rem;
 }
+
+/*  <!--========================= RIGHT COLUMN =========================--> */
+.right-column {
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+  height: fit-content;
+}
+
+.right-column .messages {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right-column .messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right-column .messages i {
+  font-size: 1.4rem;
+}
+
+.right-column .messages .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right-column .messages .category {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right-column .messages .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right-column .messages .category h6.active {
+  border-color: var(--color-dark);
+}
+
+.right-column .messages .category .message-requests {
+  color: var(--color-primary);
+}
+
+.right-column .messages .message {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.right-column .messages .message:last-child {
+  margin-bottom: 0;
+}
+
+.right-column .messages .message p {
+  font-size: 0.8rem;
+}
+
+.right-column .messages .message > div:first-child {
+  position: relative;
+}
+.right-column .messages .message .active-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 3px solid var(--color-white);
+  border-radius: 50%;
+  background-color: var(--color-success);
+}
+
+/* <!------------------------- Friend Requests ----------------------- --> */
+.friend-requests {
+  margin-top: 1rem;
+}
+
+.friend-requests h4 {
+  color: var(--color-gray);
+  margin: 1rem 0;
+}
+
+.request {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+}
+
+.request .info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.request .action {
+  display: flex;
+  gap: 1rem;
+}
+
 /* 
-              <img class="feed__photo" src="./images/feed-1.jpg" />
-
-              <div class="feed__action-btns">
-                <div class="feed__action-btns__group">
-                  <i class="uil uil-heart"></i>
-                  <i class="uil uil-comment-dots"></i>
-                  <i class="uil uil-share-alt"></i>
-                </div>
-                <div class="feed__action-btns-bookmark">
-                  <i class="uil uil-bookmark-full"></i>
-                </div>
-              </div>
-
-              <div class="feed__liked-by">
-                <img src="./images/profile-10.jpg" />
+          <!------------------------- Friend Requests ----------------------- -->
+          <div class="friend-requests">
+            <h4>Requests</h4>
+            <div class="request">
+              <div class="info">
+                <img src="./images/profile-13.jpg" class="profile-picture" />
                 <div>
-                  <img src="./images/profile-10.jpg" />
-                </div>  
-                <img src="./images/profile-4.jpg" />
-                <img src="./images/profile-15.jpg" />
-                <p>Liked by <b>Ernest Achiever</b> and <b>2,232 others</b></p>
+                  <h5>Hajia Bintu</h5>
+                  <p class="text-muted">8 mutual friends</p>
+                  <div class="action">
+                    <button class="btn btn-primary">Accept</button>
+                    <button class="btn">Decline</button>
+                  </div>
+                </div>
               </div>
-*/
+            </div>
+          </div>
+        </div>
+*/ ;
