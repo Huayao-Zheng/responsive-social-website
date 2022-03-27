@@ -46,3 +46,44 @@ function searchMes() {
     }
   });
 }
+
+// =========== theme-model ==================
+const themeModal = document.querySelector('.customize-theme');
+const theme = document.querySelector('#theme');
+
+theme.addEventListener('click', openThemeModal);
+themeModal.addEventListener('click', closeThemeModal);
+
+function openThemeModal() {
+  themeModal.style.display = 'grid';
+}
+
+function closeThemeModal(e) {
+  console.log(e.target.classList.contains('customize-theme'));
+  if (e.target.classList.contains('customize-theme')) {
+    themeModal.style.display = 'none';
+  }
+}
+
+// =========== font-size ==================
+const fontSizeOptions = document.querySelectorAll('.choose-size span');
+
+fontSizeOptions.forEach((fsOption) => {
+  let fontSizeMap = {
+    'font-size-1': '10px',
+    'font-size-2': '13px',
+    'font-size-3': '16px',
+    'font-size-4': '19px',
+    'font-size-5': '22px',
+  };
+
+  fsOption.addEventListener('click', () => {
+    const fs = fontSizeMap[fsOption.classList[0]];
+
+    removeActiveClassFrom(fontSizeOptions);
+
+    fsOption.classList.add('active');
+
+    document.querySelector('html').style.fontSize = fs;
+  });
+});

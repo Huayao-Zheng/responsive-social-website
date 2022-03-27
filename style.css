@@ -522,14 +522,14 @@ main .container .left-column .profile {
 
 /*     <!-- ===================================================== Theme Customization ===================================================== --> */
 .customize-theme {
+  display: none;
+  place-items: center;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 100;
-  display: none;
-  place-items: center;
   font-size: 0.9rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -695,6 +695,10 @@ main .container .left-column .profile {
   .left-column .btn {
     display: none;
   }
+
+  .customize-theme .card {
+    width: 80vw;
+  }
 }
 
 /* ===================================== Media Queries for small tablets and mobile phones ===================================== */
@@ -734,5 +738,8 @@ main .container .left-column .profile {
 
   main .container .right-column {
     display: none;
+  }
+  .customize-theme .card {
+    width: 90vw;
   }
 }
